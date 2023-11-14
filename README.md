@@ -7,7 +7,7 @@
 
 This is the official repository for the implementation of **L0-Sampler: An L0 Model Guided Volume Sampling for NeRF**.
 
-We present L0-Sampler, an upgrade of the Hierarchical Volume Sampling strategy of NeRF. Through the use of piecewise interpolation, we fit a quasi-L0 function, denoted as w(t), which closely resembles an indicator function capturing the L0 distance between points and surfaces. By normalizing this function, we create a probability density function (PDF) that effectively guides inverse transform sampling. By testing on different data sets, our proposed L0-Sampler with different NeRF frameworks can achieve stable performance improvements on rendering and reconstruction tasks with few lines of code modifications and around the same training time.
+We present L0-Sampler, an upgrade of the Hierarchical Volume Sampling strategy of NeRF. Through the use of piecewise interpolation, we fit a quasi-L0 function, denoted as w(t), which closely resembles an indicator function capturing the L0 distance between points and surfaces. By normalizing this function, we create a probability density function (PDF) that effectively guides inverse transform sampling. By testing on different datasets, our proposed L0-Sampler with different NeRF frameworks can achieve stable performance improvements on rendering and reconstruction tasks with few lines of code modifications and around the same training time.
  
 #### Only a few lines of code need to be changed from NeRF's HVS to ours:
 
