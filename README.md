@@ -3,7 +3,7 @@
   <img width="100%" src="media/pipeline2.png"/>
 </p>
 
-## [Project page](https://ustc3dv.github.io/L0-Sampler/)  |  [Paper](https://arxiv.org/abs/)
+## [Project page](https://ustc3dv.github.io/L0-Sampler/)  |  [Paper](https://arxiv.org/abs/2311.07044)
 
 This is the official repository for the implementation of **L0-Sampler: An L0 Model Guided Volume Sampling for NeRF**.
 
@@ -113,7 +113,7 @@ Cite as below if you find this repository is helpful to your project:
 @article{li2023l0sampler,
       author    = {Li, Liangchen and Zhang, Juyong},
       title     = {$L_0$-Sampler: An $L_{0}$ Model Guided Volume Sampling for NeRF},
-      journal   = {arXiv:2023.?????},
+      journal   = {arXiv:2311.07044},
       year      = {2023},
   }
 ```
