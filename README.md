@@ -26,21 +26,9 @@ We present L0-Sampler, an upgrade of the Hierarchical Volume Sampling strategy o
     pdf = integral / torch.sum(integral, -1, keepdim=True) # Here NeRF uses weights to normalize
     cdf = torch.cumsum(pdf, -1)
     cdf = torch.cat([torch.zeros_like(cdf[...,:1]), cdf], -1)
-
-    # Take uniform samples
-    if det:
-        u = torch.linspace(0., 1., steps=N_samples)
-        u = u.expand(list(cdf.shape[:-1]) + [N_samples])
-    else:
-        u = torch.rand(list(cdf.shape[:-1]) + [N_samples])
-
-    # Invert CDF
-    u = u.contiguous()
-    inds = torch.searchsorted(cdf, u, right=True)
-    below = torch.max(torch.zeros_like(inds-1), inds-1)
-    above = torch.min((cdf.shape[-1]-1) * torch.ones_like(inds), inds)
-    inds_g = torch.stack([below, above], -1)  # (batch, N_samples, 2)
-
+                        .
+                        .
+                        .
     matched_shape = [inds_g.shape[0], inds_g.shape[1], cdf.shape[-1]]
     cdf_g = torch.gather(cdf.unsqueeze(1).expand(matched_shape), 2, inds_g)
     bins_g = torch.gather(bins.unsqueeze(1).expand(matched_shape), 2, inds_g)
